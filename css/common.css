@@ -1,0 +1,91 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #fff;
+    font-size: 18px;
+}
+body{
+    background: #000;
+    margin: 0;
+    cursor: none;
+    overflow-x: hidden;
+}
+
+/* cursor */
+.cursor{
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transition-property: background, transform;
+    transform-origin: 100% 100%;
+    z-index: 500;
+}
+/* cursor change */
+.change{
+    border: 2px solid #000;
+}
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+figure{margin: 0;}
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* padding-top: 20px; */
+}
+.logo{
+    display: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+    padding-left: 12%;
+    padding-top: 10px;
+    cursor: none;
+}
+.navbar{
+    text-align: right;
+    padding: 20px 30px;
+}
+.navbar-grow{
+    transform: scale(1.8);
+    background: transparent;
+}
+.hover{
+    font-size: 15px;
+    color: #db2a2a;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 25px;
+    
+}
+.navbar ul li.active{color: #db2a2a;}
+
+.navbar ul li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: none;
+}
+
+
+

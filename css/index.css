@@ -1,0 +1,279 @@
+@charset 'utf-8';
+@import url(common.css);
+
+
+
+/* 타이틀 */
+.title1, .title2, .title4{
+    text-align: center;
+    font-family: 'Patua One', cursive;
+    -webkit-text-stroke:0.02em rgb(255, 255, 255);
+    color: transparent;
+    text-transform: uppercase;
+    font-size: 3vw;
+    height: 90px;
+    overflow: hidden;
+    margin-top: 3%;
+}
+.title1::after{
+    display: block;
+    content: '';
+    width: 10%;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.title2::after{
+    display: block;
+    content: '';
+    width: 15%;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+.title4::after{
+    display: block;
+    content: '';
+    width: 12%;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+
+
+/* section 1 */
+.home{
+    position: relative; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .row{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+} */
+p{
+    font-size: 5em;
+    font-weight: 700;
+    word-break: keep-all;
+    line-height: 1.6;
+    margin: 0;
+}
+p strong{
+    color:#db2a2a;
+    font-size: 1em;
+    position: relative;
+}
+p strong::after{
+    content: "";
+    width: 1px;
+    height: 1em;
+    border: 1px solid #db2a2a;
+    position: absolute;
+    right: -8px;
+    top: 25px;
+    animation: blink 0.5s infinite;
+}
+
+
+
+
+
+/* section 3 */
+.portfolio{height: 100%; position: relative;}
+
+/* 팝업창 */
+.popup{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: none;
+}
+.popup-box{
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+}
+
+.popup-box ul{
+    text-align: left; list-style: none;
+    padding: 0 20%;
+    margin-top: 10%;
+    line-height: 1.8;
+}
+.popup-box .cancel{
+    background: red;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+}
+.popup-box ul li span{color: #000; font-size: 24px;}
+.popup-box ul li span:nth-of-type(1){ margin-right: 10px;}
+
+.popup-box ul li i{color: #000; font-size: 24px; margin-right: 10px;}
+.rt, .lt{
+    display: block;
+    width: 28px;
+    height: 4px;
+    background: #000;
+    position: absolute;
+    top: 20px;
+    right: 8px;
+}
+.lt{transform: rotate(135deg);}
+.rt{transform: rotate(55deg);}
+.content2{
+    width: 100%;
+}
+
+.project-list{
+    padding: 5% 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copy{
+    font-family: Arial, Helvetica, sans-serif;
+    flex-basis: 50%;
+}
+
+.number{
+    font-family: inherit;
+    font-size: 3em;
+}
+.name{
+    font-family: inherit;
+    font-size: 160px; font-weight: 700;
+}
+.site{font-family: Arial, Helvetica, sans-serif;}
+.site > a{
+    color: #f00; text-decoration: none; 
+    font-family: inherit;
+    font-size: 15px;
+    letter-spacing: 0.333333em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.site > a::after{
+    content: '';
+    height: 1px;
+    background: #f00;
+    width: 18.333333em;
+    display: inline-block;
+    margin-left: 1em;
+    vertical-align: middle;
+}
+
+
+/* 큐브이벤트 */
+.swiper-container{
+    width: 620px;
+    height: 420px;
+}
+.swiper-slide {
+	text-align:center;
+	display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+	align-items:center; /* 위아래 기준 중앙정렬 */
+	justify-content:center; /* 좌우 기준 중앙정렬 */
+	border:5px solid silver;
+	background-color:#fff;
+	border-radius:5px;
+	/* box-shadow:0 0 75px rgba(193, 193, 193, 0.8) inset; */
+	box-sizing:border-box; /* 이 설정을 하지 않으면 슬라이드시 큐브가 틀어짐 */
+}
+.swiper-slide img{width: 500px; height: 330px;}
+
+
+
+
+
+
+/* section 4 */
+.contact{
+    height: 100vh;
+    position: relative;
+}
+.content3{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: flex-end;
+}
+.databox{flex-basis: 40%;}
+.data{
+    flex-basis: 35%;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    height: 400px;
+}
+.data ul{
+    list-style: none;
+}
+
+.data ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 12px;
+    font-size: 18px;
+}
+.data ul li span{
+    display: inline-block;
+    flex-basis: 50%;
+}
+
+.data ul li a i{
+    font-size: 30px;
+}
+
+
+
+
+/* 애니메이션 */
+
+@keyframes blink {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
+@keyframes fill-bar{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+/* scroll trigger */
+/* [data-active]{
+    opacity: 0;
+    position: relative;
+    top: 50px;
+    transition: .8s;
+}
+[data-active].animatedIn{
+    opacity: 1;
+    top: 0;
+} */

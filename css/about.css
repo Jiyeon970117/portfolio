@@ -1,0 +1,220 @@
+@charset 'utf-8';
+@import url(common.css);
+
+/* section 2 */
+.about{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    position: relative;
+}
+.character{flex-basis: 45%; text-align: center;}
+.character figure img{
+    width: 70%;
+    filter: grayscale(1);
+    border-radius: 50%;
+}
+
+.user{
+    flex-basis: 50%;
+    padding: 5% 0;
+}
+.arrow{
+    position: absolute;
+    top: 10px;
+    left: 39%;
+    transform: rotate(318deg)
+}
+.arrow img{
+    width: 100px;
+    height: 120px;
+}
+
+.user h2{
+    font-size: 3em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.info p{
+    /* color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.8;
+    word-break: keep-all;
+    padding: 0 20px; */
+
+    margin: .5em 0;
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 1.4em;
+    letter-spacing: .1px;
+    color: #676767;
+    text-align: justify
+}
+
+/* section 2 */
+.information{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.information-wrap{
+    width: 80%;
+    margin: 0 auto;
+}
+.tool{width: 80%;}
+.my-aim, .my-skills{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+.my-aim > span{
+    position: absolute;
+    left: 3%;
+    top: 20%;
+}
+.my-skills > span{
+    position: absolute;
+    top: 8%;
+    left: 3%;
+}
+
+.my-aim h2, .my-skills h2{
+    font-size: 2.3em;
+    color: #676767;
+    flex-basis: 40%;
+    padding: 10px 0;
+    text-align: center;
+}
+.my-aim p, .my-skills p{
+    font-size: 1.3em;
+    font-weight: 100;
+    margin-top: 20px;
+    word-break: keep-all;
+}
+/* 마우스 클릭 효과 */
+.development p, .design p{height: 0px; transition: .8s; opacity: 0;}
+.development > .my-skill.active{height: 80px ; opacity: 1;}
+.design > .my-skill.active{height: 45px ; opacity: 1;}
+
+
+
+
+
+
+
+.development, .design{
+    position: relative;
+    margin-bottom: 12px;
+    /* padding-bottom: 5%; */
+}
+.development h3, .design > h3{
+    font-size: 1.8em;
+    font-weight: 700;
+}
+.development::after, .design::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #676767;
+    padding-top: 15px;
+}
+
+.development > span{
+    position: absolute;
+    top: 13px;
+    left: 28%;
+}
+.design > span{
+    position: absolute;
+    top: 18px;
+    left: 14%;
+
+}
+
+.development > span > i, .design > span > i, span > i{
+    color: #676767; font-size: 32px;
+    padding: 0 25px;
+}
+.rotate{
+    transform: rotate(178deg);
+}
+
+.skills{padding: 5% 25%;}
+
+
+.skills-box h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3em;
+}
+
+
+.skill-name{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+.skill-bar{
+    height: 14px;
+    background: #282828;
+}
+.skill-value{
+    height: 14px;
+    background: #f00;
+    position: relative;
+    opacity: 0;
+}
+.skill-value.active{
+    animation: fill-bar 3s 1;
+    opacity: 1;
+}
+.skill-value::before{
+    content: attr(value);
+    position: absolute;
+    background: #fff;
+    color: #000;
+    top: -45px; right: 0;
+    transform: translateX(50%);
+    padding: 4px;
+}
+
+.skill-value::after{
+    content: '';
+    position: absolute;
+    top: -15px; right: 0;
+    transform: translateX(50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background: #fff;
+}
+
+
+
+
+/* 애니메이션 */
+
+@keyframes fill-bar{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
