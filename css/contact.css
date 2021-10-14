@@ -1,3 +1,109 @@
+/* section 1 */
+.contact1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; height: 100vh;
+    /* background: #fff; */
+}
+.envelope{
+    position: relative;
+    width: 500px;
+    height: 400px;
+    background: #939393;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transform-style:preserve-3d;
+    perspective: 700px;
+    transform: translateY(-1000px) rotate(360deg); 
+    transition: 0.5s;
+}
+.envelope.visible{transform: translateY(0) rotate(0);}
+.click{
+    font-size: 1.8em;
+    color: #db2a2a;
+    position: absolute;
+    top: 45%; left: 43%;
+    transform: translate(-45%, -43%);
+    z-index: 10;
+    animation: up-down 1.2s infinite  ease-in-out alternate;
+
+}
+.front{
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 0;
+    z-index: 3;
+}
+.flap{
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent;
+    border-bottom: 193px solid transparent;
+    border-top: 207px solid #c5c5c5;
+    /* border-top: 207px solid #676767; */
+    transform-origin: top;
+    transition: 1s ease;
+}
+.pocket{
+    border-left: 250px solid #e7e7e7;
+    border-right: 250px solid #e7e7e7;
+    border-bottom: 200px solid #ebebeb;
+    /* border-left: 250px solid #818080;
+    border-right: 250px solid #818080;
+    border-bottom: 200px solid #9f9f9f; */
+    border-top: 200px solid transparent;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* click 이벤트 */
+.envelope.active .flap{
+    transform: rotateX(180deg);
+    transition: 1.2s ease-in;
+    z-index: 11;
+}
+.envelope.active .letter{
+    animation: open 2s 1s ease-in;
+    animation-fill-mode: forwards;
+}
+
+
+/* letter */
+.letter{
+    position: absolute;
+    top: 0; left: 2.5%;
+    background: #000;
+    width: 95%; height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
+    /* border-radius: 30px; */
+}
+
+.letter > h2{
+    text-align: center;
+    color: transparent;
+    padding-top: 10px;
+    font-size: 3em;
+    -webkit-text-stroke: 0.03em #858585;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+.letter > div{padding: 25px 12px;}
+
+.letter > div > span{
+    color: #fff;
+    flex-basis: 70%;
+    font-size: 1.5em;
+    margin-left: 10%;
+}
+.letter > div > a{padding: 8px 12px;}
+
+.letter > div > a > i{
+    color: #fff;
+    font-size: 2em;
+
+}
+/* section2 */
 .contact{
     height: 100vh;
     position: relative;
@@ -43,5 +149,31 @@
 
 .data ul li a i{
     font-size: 30px;
+}
+
+/* 애니메이션 */
+
+/* click */
+@keyframes up-down {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+}
+
+/* envelope */
+@keyframes open {
+    0%{
+        top: 5%;
+    }
+    50%{
+        top: -100%;
+    }
+    100%{
+        top: 8%;
+        z-index: 10;
+    }
 }
 

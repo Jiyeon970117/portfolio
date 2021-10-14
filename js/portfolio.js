@@ -1,7 +1,8 @@
 const content1 = document.querySelector('.content1');
 const Project = document.querySelector('.prj-1');
 const Project2 = document.querySelector('.prj-2');
-// import navBar from "./common"
+const Project3 = document.querySelector('.prj-3');
+
     setTimeout(function(){
         content1.classList.add('active')
     },1000)
@@ -19,6 +20,9 @@ Project.addEventListener('click', function(){
 })
 Project2.addEventListener('click', function(){
   location.href='portfolio02.html'
+})
+Project3.addEventListener('click', function(){
+  location.href='portfolio03.html'
 })
 
 // 큐브 이벤트
@@ -57,60 +61,41 @@ new Swiper( '.myswiper', {
 
 
 // scrolltrigger 이벤트
+gsap.timeline({
+    scrollTrigger: {
+        trigger: ".content2",
+        start: "center center", // 애니메이션 시작 지점
+        end: "bottom top",    //  애니메이션 끝 지점
+        markers: false,
+        scrub: true,          //되감기
+        pin: true
 
-gsap.utils.toArray("section").forEach((section, i) => {
-  ScrollTrigger.create({
-    trigger: section,
-    start: "top top", 
-    pin: true,
-    pinSpacing: false,
-  });
-});
-ScrollTrigger.create({
-  snap: 1 / 2
-});
-
-let timeline = new TimelineMax();
-
-// timeline.to(".box2", 5, {x: '-200px'})
-timeline.fromTo(".box2",{opacity: 0}, {opacity: 1, duration: 4,})
+    }
+})
+.from(".text4", {x: innerWidth * 1})
+.from(".text5", {x: innerWidth * -1})
+.from(".text6", {x: innerWidth * 1})
+.from(".prj-2", {
+    y: innerHeight * 1,
+    rotate: 360
+})
 
 
-// gsap.timeline({
-//     scrollTrigger: {
-//         trigger: ".box1",
-//         start: "center center", // 애니메이션 시작 지점
-//         end: "bottom top",    //  애니메이션 끝 지점
-//         markers: false,
-//         scrub: true,
-//         pin: true
+gsap.timeline({
+    scrollTrigger: {
+        trigger: ".content3",
+        start: "center center", // 애니메이션 시작 지점
+        end: "bottom top",    //  애니메이션 끝 지점
+        markers: false,
+        scrub: true,
+        pin: true
 
-//     }
-// })
-// // .from(".number", {x: "-300px"})
-// .from(".text1", {x: innerWidth * 1})
-// .from(".text2", {x: innerWidth * -1})
-// .from(".text3", {x: innerWidth * 1})
-// .from(".project-img", {
-//     y: innerHeight * 1,
-//     rotate: 360
-// })
-
-// gsap.timeline({
-//     scrollTrigger: {
-//         trigger: ".box2",
-//         start: "center center", // 애니메이션 시작 지점
-//         end: "bottom top",    //  애니메이션 끝 지점
-//         markers: false,
-//         scrub: true,          //되감기
-//         pin: true
-
-//     }
-// })
-// .from(".text4", {y: innerHeight * 1})
-// .from(".text5", {y: innerHeight * 1})
-// .from(".text6", {y: innerHeight * 1})
-// .from(".project-img2", {
-//     y: innerHeight * 1,
-//     rotate: 360
-// })
+    }
+})
+.from(".text7", {y: innerHeight * 1})
+.from(".text8", {y: innerHeight * 1})
+.from(".text9", {y: innerHeight * 1})
+.from(".prj-3", {
+    y: innerHeight * 1,
+    rotate: 360
+})

@@ -49,6 +49,7 @@ const Content = document.querySelectorAll('section');
 
 //텍스트 타이핑 이벤트
 const texts = ["끊임없이 노력하는", "사용자의 관점에서 개발하는","최신 트렌드를 중요시하는" ]
+
 const change = document.querySelector('.home p strong')
 let count = 0;
 let index = 0
@@ -73,20 +74,6 @@ let letter = '';
 
 
 
-
-gsap.timeline({
-    scrollTrigger: {
-        trigger: ".contact",
-        start: "center center", // 애니메이션 시작 지점
-        end: "bottom top",    //  애니메이션 끝 지점
-        markers: false,
-        scrub: true,
-        pin: true
-    }
-})
-.from(".title4", {y: innerHeight * 1})
-.from(".databox", {y: innerHeight * 1})
-.from(".data", {y: innerHeight * 1})
 
 
 

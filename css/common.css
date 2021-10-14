@@ -17,6 +17,8 @@ body{
     cursor: none;
     overflow-x: hidden;
 }
+ul{list-style: none;}
+a{text-decoration: none;}
 
 /* cursor */
 .cursor{
@@ -31,6 +33,7 @@ body{
     transition-property: background, transform;
     transform-origin: 100% 100%;
     z-index: 500;
+    mix-blend-mode: difference;
 }
 /* cursor change */
 .change{
@@ -41,6 +44,7 @@ header{
     position: fixed;
     top: 0;
     z-index: 10;
+    mix-blend-mode: difference;
 }
 figure{margin: 0;}
 nav{
@@ -69,13 +73,13 @@ nav{
     background: transparent;
 }
 .hover{
-    font-size: 15px;
     color: #db2a2a;
 }
 .navbar ul li{
     list-style: none;
     display: inline-block;
     padding: 10px 25px;
+
     
 }
 .navbar ul li.active{color: #db2a2a;}
@@ -85,6 +89,8 @@ nav{
     text-decoration: none;
     font-weight: 500;
     cursor: none;
+
+   
 }
 
 
