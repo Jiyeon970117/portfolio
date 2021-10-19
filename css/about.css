@@ -106,7 +106,7 @@
 }
 
 .character{
-    flex-basis: 40%;
+    flex-basis: 35%;
     position: sticky;
 }
 .character figure {height: 100%; width: 400px;}
@@ -122,16 +122,16 @@
 .tape-left img, .tape-right img{width: 170px;}
 .tape-right{
     position: absolute;
-    top: -5%; left: 45%;
+    top: -5%; left: 50%;
     transform: rotate(230deg);
 }
 .user{
-    flex-basis: 50%;
+    flex-basis: 55%;
     /* padding: 5% 0; */
     /* padding-left: 4em; */
 }
 .con2{
-    margin-top: 15em;
+    margin-top: 5em;
 }
 
 .user h2{
@@ -139,6 +139,12 @@
     font-weight: 700;
     line-height: 1.8;
 }
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+.information{flex-basis: 50%;}
+.Education{flex-basis: 45%;}
 .info p{margin: .5em 0;}
 
 .info p span{
@@ -268,8 +274,22 @@
     height: 10px;
     background: #fff;
 }
-
-
+.information > h3{font-size: 1.8em; font-weight: 700;}
+.information > h3::after, .Education > h3::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    border-bottom: 3px solid #676767;
+    margin: 10px 0;
+}
+.information > ul > li, .Education > ul > li{
+    font-size: 1.3em;
+    font-weight: 100;
+    line-height: 1.7;
+    word-break: keep-all;
+}
+.Education h3{font-size: 1.8em; font-weight: 700;}
 
 
 /* 애니메이션 */
