@@ -73,14 +73,6 @@
     color: transparent;
     -webkit-text-stroke: 0.05em #858585;
 }
-@keyframes rotate-text {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-}
 /* section 2 */
 .about{
     width: 100%;
@@ -89,6 +81,7 @@
     align-items: center;
 }
 .content{
+    width: 100%;
     padding: 100px;
     display: flex;
     justify-content: space-evenly;
@@ -116,11 +109,10 @@
     flex-basis: 40%;
     position: sticky;
 }
-.character figure {height: 100%;}
+.character figure {height: 100%; width: 400px;}
 .character figure img{
-    /* width: 70%;
-    border-radius: 50%; */
     filter: grayscale(1);
+    width: 100%;
 }
 .tape-left{
     position: absolute;
@@ -138,22 +130,13 @@
     /* padding: 5% 0; */
     /* padding-left: 4em; */
 }
-.con2{margin-top: 15em;}
-.arrow{
-    position: absolute;
-    top: 10px;
-    left: 39%;
-    transform: rotate(318deg)
-}
-.arrow img{
-    width: 100px;
-    height: 120px;
+.con2{
+    margin-top: 15em;
 }
 
 .user h2{
     font-size: 3em;
     font-weight: 700;
-    /* text-transform: uppercase; */
     line-height: 1.8;
 }
 .info p{margin: .5em 0;}
@@ -166,59 +149,32 @@
     color: gray;
     text-align: justify;
     word-break: keep-all;
+    /* opacity: 0;
+    display: none; */
 }
 
-/* section 2 */
-/* .information{
-    width: 100%;
-    height: 100%;
-} */
 .information-wrap{padding: 100px;}
 .tool{width: 80%;}
-.my-aim, .my-skills{
-    position: relative;
-    /* width: 80%;
-    margin: 0 auto; */
-    /* display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-bottom: 5%; */
-}
-.my-aim > span{
-    position: absolute;
-    left: 3%;
-    top: 20%;
-}
 .my-skills > span{
     position: absolute;
     top: 3%;
     left: 3%;
 }
 
-.my-aim h2, .my-skills h2{
+.my-skills h2{
     font-size: 3em;
     color: #fff;
     /* font-size: 2.3em;
     color: gray; */
     flex-basis: 40%;
-    padding: 10px 0;
+    margin-bottom: 2%;
 }
-.my-aim p, .my-skills p{
-    font-size: 1.3em;
-    font-weight: 100;
-    margin-top: 20px;
-    word-break: keep-all;
-}
-
-
-
 
 
 
 .development, .design{
     position: relative;
     margin-bottom: 12px;
-    /* padding-bottom: 5%; */
 }
 .development h3, .design > h3{
     font-size: 1.8em;
@@ -236,12 +192,12 @@
 .development > span{
     position: absolute;
     top: 13px;
-    left: 28%;
+    left: 30%;
 }
 .design > span{
     position: absolute;
     top: 18px;
-    left: 14%;
+    left: 15%;
 
 }
 
@@ -253,7 +209,6 @@
     transform: rotate(178deg);
 }
 
-/* .skills{padding: 5% 25%;} */
 
 .skill{
     display: flex;
@@ -272,7 +227,6 @@
 .design  > .skills-box.active{
     height: 220px;
     opacity: 1;
-
 }
 .skill-name{
     margin: 20px 0;
@@ -327,4 +281,44 @@
     to{
         width: 100%;
     }
+}
+
+@keyframes rotate-text {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .me{height: 100%;}
+    .content0{padding: 50px;}
+    .title{padding-left: 0;}
+    .title h1{font-size: 8em;}
+    .content0{padding: 30px 20px;}
+    .title p{font-size: 1.5em;}
+    .contact{margin-top: 3%;}
+    .circle{
+        width: 300px; height: 300px;
+        top: 20%; right: 5%;
+    }
+    .text span{transform-origin: 0 130px;}
+    .content{
+        padding: 30px 20px;
+        display: block;
+        transform: translateX(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .character{display: none;}
+    .character figure{width: 200px;}
+    .user h2{font-size:2em; line-height: 1.5;} */
+    .info p span{font-size: 16px;}
+    .con2{margin-top: 50px;}
+    .development h3, .design > h3{font-size: 1.3em;}
+    .development > span{top: 5px;left: 25%;}
+    .design > span{ top: 10px; left: 25%; }
 }

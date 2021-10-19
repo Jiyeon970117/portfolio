@@ -47,23 +47,12 @@ header{
     mix-blend-mode: difference;
 }
 figure{margin: 0;}
-nav{
+/* nav{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    /* padding-top: 20px; */
-}
-.logo{
-    display: none;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 35px;
-    font-weight: 800;
-    padding-left: 12%;
-    padding-top: 10px;
-    cursor: none;
-}
+} */
+
 .navbar{
     text-align: right;
     padding: 20px 30px;
@@ -93,5 +82,12 @@ nav{
    
 }
 
+@media (min-width: 768px) and (max-width: 1024px){
+    .navbar{padding: 10px 30px;}
+    .navbar ul li{padding: 10px;}
+    .navbar ul li a{font-size: 15px;}
+    .navbar-grow{transform: scale(1.2);}
+
+}
 
 

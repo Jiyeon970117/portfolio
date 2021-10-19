@@ -277,3 +277,8 @@ p strong::after{
     opacity: 1;
     top: 0;
 } */
+
+
+@media (min-width: 768px) and (max-width: 1023px){
+    p{font-size: 3em;}
+}
