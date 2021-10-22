@@ -3,7 +3,6 @@ const text = document.querySelector(".text p")
 const content = document.querySelector(".content")
 const Skills = document.querySelectorAll(".skills-box")
 const arrowUP = document.querySelectorAll('.arrow-up')
-console.log(content)
 let innerWidth = window.innerWidth;
 
 // rotate 이벤트

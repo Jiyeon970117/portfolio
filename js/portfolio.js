@@ -61,21 +61,29 @@ new Swiper( '.myswiper', {
 
 
 // scrolltrigger 이벤트
-gsap.timeline({
-    scrollTrigger: {
-        trigger: ".content2",
-        start: "center center", // 애니메이션 시작 지점
-        end: "bottom top",    //  애니메이션 끝 지점
-        markers: false,
-        scrub: true,          //되감기
-        pin: true
-
-    }
+  let Tli = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".content2",
+                    start: "center center", // 애니메이션 시작 지점
+                    end: "bottom top",    //  애니메이션 끝 지점
+                    markers: false,
+                    scrub: true,          //되감기
+                    pin: true
+                }
+            })
+Tli.from(".text4", {x: 1500, opacity: 0},{
+    opacity: 1, x: 0
 })
-.from(".text4", {x: innerWidth * 1})
-.from(".text5", {x: innerWidth * -1})
-.from(".text6", {x: innerWidth * 1})
-.from(".prj-2", {
+Tli.from(".text5", {x: -700, opacity: 0},{
+    opacity: 1, x: 0
+})
+Tli.from(".text6", {x: 1500, opacity: 0},{
+    opacity: 1, x: 0
+})
+// .from(".text4", {x: innerWidth * 1})
+// .from(".text5", {x: innerWidth * -1})
+// .from(".text6", {x: innerWidth * 1})
+Tli.from(".prj-2", {
     y: innerHeight * 1,
     rotate: 360
 })

@@ -129,6 +129,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px){
+    section{background: #fff;}
     .envelope{ width: 400px; height: 300px; }
     .flap{
         border-left: 200px solid transparent;

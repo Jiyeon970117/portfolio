@@ -55,8 +55,9 @@ figure{margin: 0;}
 
 .navbar{
     text-align: right;
-    padding: 20px 30px;
 }
+.navbar > ul{ padding: 20px 30px; }
+
 .navbar-grow{
     transform: scale(1.8);
     background: transparent;
@@ -68,8 +69,6 @@ figure{margin: 0;}
     list-style: none;
     display: inline-block;
     padding: 10px 25px;
-
-    
 }
 .navbar ul li.active{color: #db2a2a;}
 
@@ -83,7 +82,7 @@ figure{margin: 0;}
 }
 
 @media (min-width: 768px) and (max-width: 1024px){
-    .navbar{padding: 10px 30px;}
+    .navbar ul{padding: 10px 30px;}
     .navbar ul li{padding: 10px;}
     .navbar ul li a{font-size: 15px;}
     .navbar-grow{transform: scale(1.2);}

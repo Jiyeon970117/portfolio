@@ -65,7 +65,7 @@
     font-weight: 700;
     margin-top: 25px;
     animation: up-down 1.2s infinite  ease-in-out alternate;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference !important; */
 }
 .click i{
     font-size: 20px;
@@ -90,12 +90,11 @@
 
 
 
-
 /* content2 */
 .bg{background: #fff;}
 .bg .number, .bg .name{color: #000;}
-
-
+.bg .click, .bg .click i{color: #000;}
+/* .text4, .text5, .text6{opacity: 0;} */
 
 /* active */
 .navbar ul li a.active{color: #000;}
