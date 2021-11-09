@@ -9,7 +9,6 @@ const Content = document.querySelectorAll('section');
 const texts = ["끊임없이 노력하는  ", "사용자의 관점에서 개발하는  ","최신 트렌드를 중요시하는  " ]
 
 const change = document.querySelector('.home p strong')
-console.log(change)
 let count = 0;
 let index = 0;
 let currentText = '';  //현재 텍스트
