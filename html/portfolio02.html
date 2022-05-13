@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortFolio</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../css/portfolios.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/slick.css">
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="../js/slick.min.js"></script>
+    <script defer src="https://kit.fontawesome.com/bf0adeb074.js" crossorigin="anonymous"></script>
     <script defer src="../js/common.js"></script>
     <script defer src="../js/portfolios.js"></script>
 
 
 </head>
+
 <body>
-    <div class="loading">
-        <div class="loader">
-            <div class="eye l-eyes">
-                <div class="pupil"></div>
-            </div>
-            <div class="eye r-eyes">
-                <div class="pupil"></div>
-            </div>
-        </div>
-        <!-- <div class="loader"></div> -->
-    </div>
     <div class="cursor"></div>
-    <header></header>
+    <div class="home">
+        <a href="./index.html">
+            <i class="fas fa-home"></i>
+        </a>
+    </div>
     <main>
         <section>
             <div class="wrap">
@@ -53,9 +49,9 @@
                     </p>
                     <p class="view">
                         <a href="https://jiyeon970117.github.io/Project02/" target="_blank">View case study</a>
-                    </p>        
+                    </p>
                 </div>
-    
+
                 <div class="daon-img">
                     <figure class="slider">
                         <img src="../img/img1.jpg" alt="">
@@ -63,7 +59,7 @@
                         <img src="../img/img9.png" alt="">
                         <img src="../img/img10.png" alt="">
                     </figure>
-                </div>    
+                </div>
             </div>
         </section>
 
@@ -77,7 +73,7 @@
                         <div class="data">
                             <h3>제작기간</h3>
                             <p>
-                                14일(퍼블리싱3일 / 자바스크립트 4일)
+                                2021.08.04 ~ 2021.08.10
                             </p>
                         </div>
                         <div class="data">
@@ -132,43 +128,70 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <p>
-                            <span>클론 코딩을 통해 실제 홈페이지를 똑같이 구현해봤습니다.</span><br>
-                            <span>스크롤을 없애고 마우스휠 이벤트를 이용하여 한페이씩 넘어가게했습니다</span><br>
-                            <span>또한 기존의 커서가 아닌 새로운 커서를 만들어 왼쪽과 오른쪽 커서를 다르게 해줬습니다. 서브페이지에서도 많은 양의 사진들은 별도의 JSON파일을 만들어 사용했습니다.</span>
+                            <span>현대트럭 & 버스 홈페이를 클론하여 만든 프로젝트입니다.</span><br>
+                            <span>스크롤을 없애고 마우스휠 이벤트를 이용했으며 인디게이터를 추가하여 좀 더 빠르게 페이지를 넘길 수 있습니다. </span><br>
+                            <span>기존의 커서를 없애고 커스텀 커서를 만들어 width를 기준으로 왼쪽과 오른쪽의 커서 또한 다르게 나타내줬습니다.</span>
                         </p>
                     </div>
                 </div>
                 <div class="right-column">
-                    <ul>
+                    <ul class="scroll-content">
                         <li>
                             <figure>
-                                <img src="../img/img21.jpg" alt="">            
+                                <img src="../img/hyundai-01.jpg" alt="">
+                                <!-- <img src="../img/img21.jpg" alt=""> -->
                             </figure>
                         </li>
                         <li>
                             <figure>
-                                <img src="../img/img22.jpg" alt="">            
+                                <img src="../img/hyundai-04.jpg" alt="">
                             </figure>
                         </li>
                         <li>
                             <figure>
-                                <img src="../img/img23.jpg" alt="">            
+                                <img src="../img/hyundai-06.jpg" alt="">
                             </figure>
                         </li>
                         <li>
                             <figure>
-                                <img src="../img/img24.jpg" 
-                                alt="">
+                                <img src="../img/hyundai-03.jpg" alt="">
                             </figure>
                         </li>
+                        <li>
+                            <figure>
+                                <img src="../img/hyundai-02.jpg" alt="">
+                            </figure>
+                        </li>
+                        <li>
                     </ul>
+                    <div class="scroll-text">
+                        <div class="text">
+                            <p>기존의 커서를 없애고 pageX, pageY 값을 잡아 새로운 커서를 만들었습니다.</p>
+                        </div>
+                        <div class="text">
+                            <p>라이브러리를 이용해 동적인 요소를 추가해줬으며 Top버튼을 만들어 화면 상단으로 올라갈 수 있게
+                                나타내줬습니다.
+                            </p>
+                        </div>
+                        <div class="text">
+                            <p>휠 이벤트와 인디게이터를 사용하여 화면을 부드럽게 넘겨줬습니다.</p>
+                        </div>
+                        <div class="text">
+                            <p>setInterval함수와 clearInterval 함수를 이용하여 마지막 섹션에서 숫자의 값이 증가하고 원하는 값에 도달하면 멈추게 만들었습니다.
+                            </p>
+                        </div>
+                        <div class="text">
+                            <p>
+                                유튜브 API를 가져와 클식시 팝업 형식으로 나타내줬습니다.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-
-
     </main>
 </body>
+
 </html>
